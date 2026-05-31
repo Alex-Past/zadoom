@@ -208,7 +208,7 @@
     Твой браузер не поддерживает аудио.
 </audio>
 
-<button id="soundButton" class="sound-btn">SOUND ON</button>
+<button id="soundButton" class="sound-btn">ЗВУК ВКЛ</button>
 <!-- ============================================= -->
 
 <script>
@@ -288,20 +288,24 @@ const typewriterEl = document.getElementById('typewriter');
 const textLines = [
     "Здарова, зае..",
     "замечательный человек!",
-    "С Днем Рождения!",
+    "С Днем Рождения!!!",
     "Ты из тех, с кем можно и в рейд, и по жизни!",
-    "С кем можно разделить дым, спирт, порох..",
-    "И убивающий чай!",
+    "С кем можно разделить дым, спирт, порох и..",
+    "...... ...",
+    "😊",
+    "Спасибо тебе за помощь!",
     "Будь счастлив!",
     "Не кашляй и не чихай!",
     "...",
     "...",
-    "... хотел подарить тебе игрушку",
-    "но я хз какую",
+    "... хотел подарить тебе игрушку,",
+    "но я хз какую)",
     "так что..",
-    "купи себе мороженку!",
+    "назови жене пропущенную фразу",
+    "и купи себе что-нибудь 😉",
     "",
-    "Джамшут!!!"
+    "Джамшут!!!",
+    "Френдли!!!"
 ];
 
 const TYPING_SPEED = 60;       // мс между буквами
@@ -360,10 +364,10 @@ music.volume = 0.4; // Можешь сделать потише или погр�
 soundButton.addEventListener('click', () => {
     if (isPlaying) {
         music.pause();
-        soundButton.textContent = 'SOUND ON';
+        soundButton.textContent = 'ЗВУК ВКЛ';
     } else {
         music.play();
-        soundButton.textContent = 'SOUND OFF';
+        soundButton.textContent = 'ЗВУК ВЫКЛ';
     }
     isPlaying = !isPlaying;
 });
