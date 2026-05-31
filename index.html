@@ -197,6 +197,20 @@
     </div>
 </div>
 
+<!-- ... твой код с .card ... -->
+</div>
+
+<!-- ============================================= -->
+<!-- ЭЛЕМЕНТЫ ДЛЯ МУЗЫКИ -->
+<!-- ============================================= -->
+<audio id="backgroundMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Твой браузер не поддерживает аудио.
+</audio>
+
+<button id="soundButton" class="sound-btn">SOUND ON</button>
+<!-- ============================================= -->
+
 <script>
 // ========== PARTICLES ==========
 const canvas = document.getElementById('particles');
@@ -334,6 +348,25 @@ function typeNextChar() {
 
 // Start typewriter after a short delay
 setTimeout(typeNextChar, 1200);
+
+// ========== MUSIC PLAYER ==========
+const music = document.getElementById('backgroundMusic');
+const soundButton = document.getElementById('soundButton');
+let isPlaying = false;
+
+// Устанавливаем громкость (от 0 до 1)
+music.volume = 0.4; // Можешь сделать потише или погромче
+
+soundButton.addEventListener('click', () => {
+    if (isPlaying) {
+        music.pause();
+        soundButton.textContent = 'SOUND ON';
+    } else {
+        music.play();
+        soundButton.textContent = 'SOUND OFF';
+    }
+    isPlaying = !isPlaying;
+});
 </script>
 </body>
 </html>
